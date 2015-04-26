@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<form action="/rokich_result" method="post">
+  <p class="center">Перед вам два списки. Присвойте кожному із них номера від 1 до 18, де під нормером 1 буде найважливіша для вас цінність, а під номером 18 - найменш важлива.<br>
+  Спершу заповніть список А(від 1 до 18), потім перейдіть до списку Б і так само заповніть його(від 1 до 18). Номера всередині списку не повинні повторюватися.</p>
+  
+<% @statement.each do |step, statements| %>
+  <% if step == "1" %>
+    <b>Перечень А</b>
+  <% else %>
+    <br><b>Перечень Б</b>	    
+  <% end %>
+  <table style="width:100%">
+    <tr>
+    	<th><%if step == "1" %>
+    	Терминальные ценности
+    	<% else %>
+    	Инструментальные ценности 
+    	<% end %></th>
+    	<th>Место в жизни</th>
+    </tr>
+    <% (1..18).each do |key|%>
+      <tr>
+      	<td><%= statements[key] %></td>
+      	<td>
+          <div class ="center">
+      		<select name = <%="#{step}[#{key}]"%>>
+      			<option value = '' selected>Select value</option>
+      		  <% (1..18).each do |var| %>
+      		  	<option value = <%= var %>><%= var %></option>
+      		  <% end %>
+      		</select>
+        </div>
+      	</td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+
+<input type='submit' value='Далі'>
+</form>
+</body>

@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<form action='qsort_result' method='post'>
+<p class="center">Перед вами список тверджень.<br> Прочитайте їх та відмітьте відповідь "Так", якщо ви згідні з твердженням, або "Ні", якщо воно не про вас.</p>  
+<table style="width:100%">
+  <tr>
+    <th>№</th>
+    <th>Твердження</th>		
+    <th>Так</th>
+    <th>Ні</th>
+  </tr>  
+
+  <% (1..60).each do |key| %>
+    <tr>
+        <td><%= key %></td>
+        <td><%= @quest[key] %></td>
+ 	  <% (0..1).reverse_each do |tf| %>
+ 	  <td><input type='radio' name=<%=key%> value=<%=tf%></td>
+ 	  <% end %>
+    </tr>
+  <% end %>  	
+
+
+</table>
+<input type='submit' value="Закінчити опитування">
+</form>
+</body>

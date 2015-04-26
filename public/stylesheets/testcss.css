@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "DS Moster";
+    src: url("/assets/fonts/DS_Moster.ttf");
+}
+@font-face{
+    font-family: "Primer TT ParaType";
+    src: url("/assets/fonts/Primer_TT_ParaType.ttf");
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+li {
+    float: right;
+    font-family: "DS Moster";
+}
+
+a:link, a:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: grey;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;  
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #D489AF;
+}
+body {
+    background-image: url("lowpolyback.png");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+h1 {
+    font-family: "DS Moster";
+} 
+h2 {
+    font-family: "DS Moster";
+    text-align: center;
+
+}
+pre {
+    font-family: "Primer TT ParaType";
+    /*float: right;*/
+    width: 375px;
+}
+.img {
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 2px;
+}
+#container{
+    padding-left:300px;
+    display:block;
+    float:left;
+    width:100%;
+}
+.img img {
+    display: inline-block;
+    margin: 0.5px;
+
+}
+
+#poems_container {
+    padding-left:300px;
+}
+.poems {
+    display: block;
+    height: auto;
+    width: auto;
+    float: left;
+    margin-top:40px;
+}
+

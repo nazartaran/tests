@@ -1,0 +1,33 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    color:black;
+    font-size: 20px;
+}
+body {
+    background-image: url("polygon-2.png");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+    float: left;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: black;
+    color: white;
+}
+.shapka {
+	background-color: #E8BF96;
+    color: #ffffff;
+}
+.kolir {
+	background-color: #C2A385;
+}
+.center {
+	text-align: center;
+	font-size: 25px;
+}
