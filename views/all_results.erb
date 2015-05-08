@@ -1,0 +1,9 @@
+<% unless @all_tests.empty? %>
+	<table border="1px solid">
+	<tr><th>Ім'я</th><th>Вік</th><th>Результат "Страх"</th><th>Результат "Рокіч"</th><th>Результат "Конфлікт 1"</th><th>Результат "Конфлікт 2"</th><th>Результат "Конфлікт 3"</th></tr>
+	<% @all_tests.each do |test| %>
+	  <tr><td><%= test.name%></td><td><%= test.age %></td><td><%= test.fear_result %></td><td><%= test.rokich_result %></td><td><%= test.konf_result_1 %></td><td><%= test.konf_result_2 %></td>
+	  <td><%= test.konf_result_3 %></td></tr>
+	<% end %>
+	</table>
+<% end %>

@@ -282,3 +282,8 @@ end
 get '/testcss' do
   erb :testcss
 end
+
+get '/all_results' do
+  @all_tests = Test.all
+  erb :all_results
+end
